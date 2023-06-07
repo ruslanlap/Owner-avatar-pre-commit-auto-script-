@@ -11,11 +11,7 @@ NC='\033[0m' # No Color
 create_gitleaks_config() {
     echo '[[rules]]
 regex = "API[_-]?KEY"
-tags = ["api-key"]
-
-[[rules]]
-regex = "token"
-tags = ["token"]' > .gitleaks.toml
+tags = ["api-key", "token" ]' > .gitleaks.toml
 }
 
 # Визначення операційної системи
