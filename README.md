@@ -37,7 +37,11 @@ Before using this script, make sure you have the following dependencies installe
 
 ## Installation
 just copy and run the command
-`curl -sSfL https://raw.githubusercontent.com/matvrus/pre-commit-auto-script/main/install.sh | bash`
+
+```
+curl -sSfL https://raw.githubusercontent.com/matvrus/pre-commit-auto-script/main/install.sh | bash
+
+```
 
 ## Usage
 
@@ -47,5 +51,5 @@ You can review and customize the list of available hooks in the `.pre-commit-con
 ## DEMO
 How does the script work?
 An image: ![Alt](data/demo.gif)
-An image: ![Alt](data/example1.png)
-An image: ![Alt](data/Example2.png.jpg)
+An image: ![Alt](data/Example1.png)
+An image: ![Alt](data/Example2.png)
