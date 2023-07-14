@@ -23,6 +23,11 @@ else
     echo -e "${GREEN}Перевірка секретів пройшла успішно.${NC}"
 fi
 
+config_file=".git/config"
+
+# Set gitleaks.enabled to true
+sed -i 's/gitleaks.enabled = false/gitleaks.enabled = true/' "$config_file"
+
 # Disable pre-commit hook
 git config gitleaks.enabled false
 # Enable pre-commit hook
