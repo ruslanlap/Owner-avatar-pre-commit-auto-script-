@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Кольорові коди та емоджі
 GREEN='\033[0;32m'
 RED='\033[0;31m'
@@ -85,21 +83,6 @@ git restore README.md
 
 GITLEAKS_VERSION=$(gitleaks version)
 echo -e "Версія gitleaks: ${GREEN}${BOLD}${GITLEAKS_VERSION}!${NC}"
-
-# Запит на вибір статусу gitleaks.enabled
-read -p "Виберіть статус gitleaks.enabled (true/false): " gitleaks_status
-
-# Встановлення gitleaks.enabled відповідно до вибраного статусу
-if [[ "$gitleaks_status" == "true" ]]; then
-    git config gitleaks.enabled true
-    echo -e "${GREEN}gitleaks.enabled встановлено на true.${NC}"
-elif [[ "$gitleaks_status" == "false" ]]; then
-    git config gitleaks.enabled false
-    echo -e "${GREEN}gitleaks.enabled встановлено на false.${NC}"
-else
-    echo -e "${RED}Невірний вибір статусу.${NC}"
-    exit 1
-fi
 
 # Визначте URL репозиторію, де знаходиться скрипт pre-commit
 REPO_URL="https://raw.githubusercontent.com/matvrus/pre-commit-auto-script/main/pre-commit.sh"
