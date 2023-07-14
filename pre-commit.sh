@@ -7,8 +7,7 @@ BLUE='\033[0;34m'
 BOLD='\033[1m'
 NC='\033[0m' # No Color
 
-# Disable pre-commit hook
-git config gitleaks.enabled false
+
 
 # Запуск gitleaks
 echo -e "${GREEN}Запуск gitleaks...${NC}"
@@ -23,6 +22,3 @@ if [[ $gitleaksExitCode -eq 1 ]]; then
 else
     echo -e "${GREEN}Перевірка секретів пройшла успішно.${NC}"
 fi
-
-# Enable pre-commit hook
-git config gitleaks.enabled true
