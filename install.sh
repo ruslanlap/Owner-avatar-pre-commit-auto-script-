@@ -7,11 +7,16 @@ NC='\033[0m' # No Color
 CHECK_MARK="\xE2\x9C\x94"
 CROSS_MARK="\xE2\x9D\x8C"
 
-# Функція створення файлу .gitleaks.toml
 create_gitleaks_config() {
     echo '[[rules]]
 regex = "API[_-]?KEY"
 tags = ["api-key", "token" ]' > .gitleaks.toml
+    
+    # Download the additional configuration from the URL
+    additional_config=$(curl -s https://raw.githubusercontent.com/gitleaks/gitleaks/master/config/gitleaks.toml)
+    
+    # Append the additional configuration to the .gitleaks.toml file
+    echo "$additional_config" >> .gitleaks.toml
 }
 
 # Визначення операційної системи
