@@ -22,3 +22,8 @@ if [[ $gitleaksExitCode -eq 1 ]]; then
 else
     echo -e "${GREEN}Перевірка секретів пройшла успішно.${NC}"
 fi
+
+# Disable pre-commit hook
+git config gitleaks.enabled false
+# Enable pre-commit hook
+git config gitleaks.enabled true
