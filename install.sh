@@ -69,7 +69,7 @@ tar -xf gitleaks.tar.gz
 chmod +x gitleaks
 
 # Копіювання gitleaks до /usr/local/bin/
-sudo cp gitleaks /usr/local/bin
+#sudo cp gitleaks /usr/local/bin
 
 echo -e "${GREEN}gitleaks встановлено.${NC}"
 
