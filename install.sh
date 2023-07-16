@@ -78,7 +78,7 @@ echo -e "${GREEN}Створення файлу .gitleaks.toml...${NC}"
 create_gitleaks_config
 
 # Видалення тимчасових файлів
-rm gitleaks.tar.gz gitleaks LICENSE
+rm gitleaks.tar.gz gitleaks
 git restore README.md
 
 GITLEAKS_VERSION=$(gitleaks version)
