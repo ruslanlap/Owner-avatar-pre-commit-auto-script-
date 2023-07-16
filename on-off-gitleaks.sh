@@ -2,7 +2,7 @@
 
 # This function disables Gitleaks.
 function disable() {
-  echo "Disable Gitleaks"
+  echo -e "${RED}Disable Gitleaks...${NC}"
   git config core.hooksPath no-hooks
 }
 
@@ -10,7 +10,7 @@ function disable() {
 
 # This function enable Gitleaks.
 function enable() {
-  echo "Enable Gitleaks"
+  echo -e "${GREEN}Enable Gitleaks...${NC}"
   git config --unset core.hooksPath
 }
 # Call the function to enable Gitleaks
