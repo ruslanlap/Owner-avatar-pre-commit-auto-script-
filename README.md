@@ -1,6 +1,6 @@
-# pre-commit hook script with automatic installation of [gitleaks](https://github.com/gitleaks/gitleaks) 🔒
+# pre-commit hook script with automatic installation of [gitleaks](https://github.com/gitleaks/gitleaks) and checks for sensitive information 🔒
 
-✨ **Pre-commit Auto Script** ✨
+✨ **Security Pre-commit Auto Script ✨
 
 ![GitHub](https://img.shields.io/github/license/matvrus/pre-commit-auto-script) ![GitHub last commit](https://img.shields.io/github/last-commit/matvrus/pre-commit-auto-script) ![GitHub issues](https://img.shields.io/github/issues/matvrus/pre-commit-auto-script)
 
