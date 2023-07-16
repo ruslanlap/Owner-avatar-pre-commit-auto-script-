@@ -47,14 +47,15 @@ echo -e "${BLUE}Архітектура: ${BOLD}$ARCH${NC}"
 # Завантаження та встановлення gitleaks
 echo -e "${GREEN}Завантаження та встановлення gitleaks...${NC}"
 
+RELEASE_VERSION="v8.17.0" # Change the version number here
 RELEASE_URL=""
 if [[ "$OS" == "darwin" ]]; then
-    RELEASE_URL="https://github.com/gitleaks/gitleaks/releases/download/v8.16.4/gitleaks_8.16.4_darwin_x64.tar.gz"
+    RELEASE_URL="https://github.com/gitleaks/gitleaks/releases/download/$RELEASE_VERSION/gitleaks_8.16.4_darwin_x64.tar.gz"
 elif [[ "$OS" == "linux" ]]; then
     if [[ "$ARCH" == "amd64" ]]; then
-        RELEASE_URL="https://github.com/gitleaks/gitleaks/releases/download/v8.16.4/gitleaks_8.16.4_linux_x64.tar.gz"
+        RELEASE_URL="https://github.com/gitleaks/gitleaks/releases/download/$RELEASE_VERSION/gitleaks-linux-amd64"
     elif [[ "$ARCH" == "arm64" ]]; then
-        RELEASE_URL="https://github.com/gitleaks/gitleaks/releases/download/v8.16.4/gitleaks_8.16.4_linux_arm64.tar.gz"
+        RELEASE_URL="https://github.com/gitleaks/gitleaks/releases/download/$RELEASE_VERSION/gitleaks_8.16.4_linux_arm64.tar.gz"
     fi
 fi
 
@@ -82,7 +83,7 @@ rm gitleaks.tar.gz gitleaks
 git restore README.md
 
 GITLEAKS_VERSION=$(gitleaks version)
-echo -e "Версія gitleaks: ${GREEN}${BOLD}${GITLEAKS_VERSION}!${NC}"
+echo -e "Gitleaks version: ${GREEN}${BOLD}${GITLEAKS_VERSION}!${NC}"
 
 # Визначте URL репозиторію, де знаходиться скрипт pre-commit
 REPO_URL="https://raw.githubusercontent.com/matvrus/pre-commit-auto-script/main/pre-commit.sh"
