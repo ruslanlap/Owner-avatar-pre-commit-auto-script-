@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Кольорові коди
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+BLUE='\033[0;34m'
+BOLD='\033[1m'
+NC='\033[0m' # No Color
+
 # This function disables Gitleaks.
 function disable() {
   echo -e "${RED}Disable Gitleaks...${NC}"
