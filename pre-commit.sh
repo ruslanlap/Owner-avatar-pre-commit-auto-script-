@@ -29,6 +29,16 @@ config_file=".git/config"
 sed -i 's/gitleaks.enabled = false/gitleaks.enabled = true/' "$config_file"
 
 # Disable pre-commit hook
-git config gitleaks.enabled false
+# Ця функція активує Gitleaks.
+function gitleaks_enable() {
+  echo "Enable Gitleaks"
+  git config --global gitleaks.enable 1
+}
+
+# Ця функція вимикає Gitleaks.
+function gitleaks_disable() {
+  echo "Disable Gitleaks"
+  git config --global gitleaks.enable 0
+}
 # Enable pre-commit hook
 git config gitleaks.enabled true
