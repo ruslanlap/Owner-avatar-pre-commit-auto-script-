@@ -7,8 +7,6 @@ BLUE='\033[0;34m'
 BOLD='\033[1m'
 NC='\033[0m' # No Color
 
-
-
 # Запуск gitleaks
 echo -e "${GREEN}Запуск gitleaks...${NC}"
 gitleaksOutput=$(gitleaks detect --redact --verbose --report-format json --report-path gitleaks-report.json --config .gitleaks.toml)
@@ -28,17 +26,18 @@ config_file=".git/config"
 # Set gitleaks.enabled to true
 sed -i 's/gitleaks.enabled = false/gitleaks.enabled = true/' "$config_file"
 
+# Enable gitleaks using git config
+git config gitleaks.enable true
+
 # Disable pre-commit hook
 # Ця функція активує Gitleaks.
 function gitleaks_enable() {
   echo "Enable Gitleaks"
-  git config --global gitleaks.enable 1
+  git config --global gitleaks.enable true
 }
 
 # Ця функція вимикає Gitleaks.
 function gitleaks_disable() {
   echo "Disable Gitleaks"
-  git config --global gitleaks.enable 0
+  git config --global gitleaks.enable false
 }
-# Enable pre-commit hook
-git config gitleaks.enabled true
