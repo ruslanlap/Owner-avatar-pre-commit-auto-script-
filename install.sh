@@ -108,5 +108,5 @@ download_on-off-gitleaks() {
     curl -sSfL "https://raw.githubusercontent.com/matvrus/pre-commit-auto-script/main/on-off-gitleaks.sh" -o on-off-gitleaks.sh
     chmod +x on-off-gitleaks.sh
     }
-download on-off-gitleaks
+download_on-off-gitleaks
 rm LICENSE
