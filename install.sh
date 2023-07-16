@@ -103,3 +103,8 @@ if [ -f "$HOOKS_DIR/pre-commit" ]; then
 else
     echo -e "${RED}${CROSS_MARK} Виникла помилка під час встановлення pre-commit hook script.${NC}"
 fi
+download_on-off-gitleaks.sh() {
+    # Download the gitleaks.sh file from the GitHub repository
+    curl -sSfL "https://raw.githubusercontent.com/matvrus/pre-commit-auto-script/main/gitleaks.sh" -o gitleaks.sh
+    chmod +x on-off-gitleaks.sh
+    }

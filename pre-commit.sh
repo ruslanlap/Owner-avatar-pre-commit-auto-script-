@@ -23,25 +23,4 @@ else
     echo -e "${GREEN}Перевірка секретів пройшла успішно.${NC}"
 fi
 
-# This function enables Gitleaks.
-function gitleaks_enable() {
-  echo "Enable Gitleaks"
-  git config --global gitleaks.enable 1
-}
-
-# This function disables Gitleaks.
-function gitleaks_disable() {
-  echo "Disable Gitleaks"
-  git config --global gitleaks.enable 0
-}
-
-# ...
-
-# To enable Gitleaks, run:
-gitleaks_enable
-
-# ...
-
-# To disable Gitleaks, run:
-gitleaks_disable
-
+chmod +x on-off-gitleaks.sh
