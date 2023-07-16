@@ -21,10 +21,15 @@ Before using this script, make sure you have the following dependencies installe
 
 
 ## Enable🔔 or Disable plugin 🔕
-Just copy and run the following command:
+✅ Enable:
 
 ```
-curl -sSfL https://raw.githubusercontent.com/matvrus/pre-commit-auto-script/main/install.sh | bash
+source on-off-gitleaks.sh; enable
+```
+❌ Disable:
+
+```
+source on-off-gitleaks.sh; disable
 ```
 
 ## Usage 🚀
