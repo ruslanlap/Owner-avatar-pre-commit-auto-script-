@@ -18,7 +18,9 @@ Before using this script, make sure you have the following dependencies installe
 
 - Curl ✔️
 
-## Installation ⚙️
+
+
+## Enable🔔 or Disable plugin 🔕
 Just copy and run the following command:
 
 ```
