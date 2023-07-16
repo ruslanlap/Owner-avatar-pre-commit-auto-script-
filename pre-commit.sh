@@ -7,6 +7,8 @@ BLUE='\033[0;34m'
 BOLD='\033[1m'
 NC='\033[0m' # No Color
 
+ENABLE=$(git config --bool hooks.gitleaks-enable)
+
 # Запуск gitleaks
 echo -e "${GREEN}Запуск gitleaks...${NC}"
 gitleaksOutput=$(gitleaks detect --redact --verbose --report-format json --report-path gitleaks-report.json --config .gitleaks.toml)
@@ -21,12 +23,25 @@ else
     echo -e "${GREEN}Перевірка секретів пройшла успішно.${NC}"
 fi
 
-config_file=".git/config"
+# This function enables Gitleaks.
+function gitleaks_enable() {
+  echo "Enable Gitleaks"
+  git config --global gitleaks.enable 1
+}
 
-# Set gitleaks.enabled to true
-sed -i 's/gitleaks.enabled = false/gitleaks.enabled = true/' "$config_file"
+# This function disables Gitleaks.
+function gitleaks_disable() {
+  echo "Disable Gitleaks"
+  git config --global gitleaks.enable 0
+}
 
-# Set gitleaks.enabled to false
-sed -i 's/gitleaks.enabled = true/gitleaks.enabled = false/' "$config_file"
+# ...
 
-#disable gitleaks
+# To enable Gitleaks, run:
+gitleaks_enable
+
+# ...
+
+# To disable Gitleaks, run:
+gitleaks_disable
+
