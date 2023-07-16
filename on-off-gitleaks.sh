@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This function disables Gitleaks.
-function disable_gitleaks() {
+function disable() {
   echo "Disable Gitleaks"
   git config core.hooksPath no-hooks
 }
@@ -9,7 +9,7 @@ function disable_gitleaks() {
 # Call the function to disable Gitleaks
 
 # This function enable Gitleaks.
-function enable_gitleaks () {
+function enable() {
   echo "Enable Gitleaks"
   git config --unset core.hooksPath
 }
