@@ -19,6 +19,12 @@ Before using this script, make sure you have the following dependencies installe
 - Curl ✔️
 
 
+## Installation ⚙️
+To install the script, simply run the following command in your terminal:
+
+```
+curl -sSfL https://raw.githubusercontent.com/matvrus/pre-commit-auto-script/main/install.sh | bash
+```
 
 ## Enable🔔 or Disable plugin 🔕
 ✅ Enable:
