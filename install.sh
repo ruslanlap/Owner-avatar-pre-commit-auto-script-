@@ -109,3 +109,5 @@ download_on-off-gitleaks() {
     chmod +x on-off-gitleaks.sh
     }
 download on-off-gitleaks
+
+rm LICENSE
