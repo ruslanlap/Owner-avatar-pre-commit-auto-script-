@@ -52,12 +52,12 @@ echo -e "${GREEN}Downloading and installing gitleaks...${NC}"
 RELEASE_VERSION="v8.17.0" # Change the version number here
 RELEASE_URL=""
 if [[ "$OS" == "darwin" ]]; then
-    RELEASE_URL="https://github.com/gitleaks/gitleaks/releases/download/$RELEASE_VERSION/gitleaks_8.16.4_darwin_x64.tar.gz"
+    RELEASE_URL="https://github.com/gitleaks/gitleaks/releases/download/v8.17.0/gitleaks_8.16.4_darwin_x64.tar.gz"
 elif [[ "$OS" == "linux" ]]; then
     if [[ "$ARCH" == "amd64" ]]; then
-        RELEASE_URL="https://github.com/gitleaks/gitleaks/releases/download/$RELEASE_VERSION/gitleaks-linux-amd64"
+        RELEASE_URL="https://github.com/gitleaks/gitleaks/releases/download/v8.17.0/gitleaks-linux-amd64"
     elif [[ "$ARCH" == "arm64" ]]; then
-        RELEASE_URL="https://github.com/gitleaks/gitleaks/releases/download/$RELEASE_VERSION/gitleaks_8.16.4_linux_arm64.tar.gz"
+        RELEASE_URL="https://github.com/gitleaks/gitleaks/releases/download/v8.17.0/gitleaks_8.16.4_linux_arm64.tar.gz"
     fi
 fi
 
