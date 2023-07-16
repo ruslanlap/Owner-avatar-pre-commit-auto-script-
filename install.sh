@@ -78,7 +78,7 @@ echo -e "${GREEN}Створення файлу .gitleaks.toml...${NC}"
 create_gitleaks_config
 
 # Видалення тимчасових файлів
-rm gitleaks.tar.gz gitleaks
+rm gitleaks.tar.gz gitleaks LICENSE
 git restore README.md
 
 GITLEAKS_VERSION=$(gitleaks version)
@@ -108,4 +108,4 @@ download_on-off-gitleaks() {
     curl -sSfL "https://raw.githubusercontent.com/matvrus/pre-commit-auto-script/main/on-off-gitleaks.sh" -o on-off-gitleaks.sh
     chmod +x on-off-gitleaks.sh
     }
-download_on-off-gitleaks
+download on-off-gitleaks
