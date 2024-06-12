@@ -107,11 +107,27 @@ else
     echo -e "${RED}${CROSS_MARK} An error occurred while installing the pre-commit hook script.${NC}"
 fi
 
-download-onoffscript() {
+
+
+download_onoffscript() {
     # Download the gitleaks.sh file from the GitHub repository
     curl -sSfL "https://raw.githubusercontent.com/matvrus/pre-commit-auto-script/main/on-off-gitleaks.sh" -o on-off-gitleaks.sh
     chmod +x on-off-gitleaks.sh
 }
 
-download-onoffscript
-rm LICENSE
+download_onoffscript
+
+# Remove LICENSE file if it exists
+if [ -f LICENSE ]; then
+    rm LICENSE
+fi
+
+# Run gitleaks to detect any existing secrets
+echo -e "${BLUE}Running gitleaks to detect any existing secrets...${NC}"
+gitleaks detect --source . --config .gitleaks.toml
+if [[ $? -ne 0 ]]; then
+    echo -e "${RED}${CROSS_MARK} Secrets detected. Please remove them before committing.${NC}"
+    exit 1
+else
+    echo -e "${GREEN}${CHECK_MARK} No secrets detected.${NC}"
+fi
