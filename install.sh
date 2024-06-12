@@ -36,9 +36,9 @@ echo -e "${BLUE}Operating System: ${BOLD}$OS${NC}"
 # Determine the architecture
 ARCH=$(uname -m)
 if [[ "$ARCH" == "x86_64" ]]; then
-    ARCH="amd64"
+    ARCH="x64"
 elif [[ "$ARCH" == "aarch64" ]]; then
-    ARCH="arm64"
+    ARCH="arm"
 else
     echo -e "${RED}Unsupported architecture.${NC}"
     exit 1
@@ -46,33 +46,26 @@ fi
 
 echo -e "${BLUE}Architecture: ${BOLD}$ARCH${NC}"
 
-# Download and install gitleaks
+# Download and install gitleaks based on OS and architecture
 echo -e "${GREEN}Downloading and installing gitleaks...${NC}"
-
-RELEASE_VERSION="v8.18.3" # Change the version number here
-RELEASE_URL=""
-if [[ "$OS" == "darwin" ]]; then
-    RELEASE_URL="https://github.com/gitleaks/gitleaks/releases/download/$RELEASE_VERSION/gitleaks_8.18.3_darwin_x64.tar.gz"
-elif [[ "$OS" == "linux" ]]; then
-    if [[ "$ARCH" == "amd64" ]]; then
-        RELEASE_URL="https://github.com/gitleaks/gitleaks/releases/download/$RELEASE_VERSION/gitleaks_8.18.3_linux_x64.tar.gz"
-    elif [[ "$ARCH" == "arm64" ]]; then
-        RELEASE_URL="https://github.com/gitleaks/gitleaks/releases/download/$RELEASE_VERSION/gitleaks_8.18.3_linux_arm64.tar.gz"
-    fi
-fi
-
-if [[ -z "$RELEASE_URL" ]]; then
-    echo -e "${RED}Unable to find a compatible version of gitleaks for this operating system and architecture.${NC}"
+if [[ "$OS" == "linux" && "$ARCH" == "arm" ]]; then
+    curl -s https://api.github.com/repos/gitleaks/gitleaks/releases/latest | grep browser_download_url | cut -d '"' -f 4 | grep 'linux_arm' | wget -i -
+    tar xf gitleaks_*_linux_arm.tar.gz
+elif [[ "$OS" == "linux" && "$ARCH" == "x64" ]]; then
+    curl -s https://api.github.com/repos/gitleaks/gitleaks/releases/latest | grep browser_download_url | cut -d '"' -f 4 | grep 'linux_x64' | wget -i -
+    tar xf gitleaks_*_linux_x64.tar.gz
+elif [[ "$OS" == "darwin" && "$ARCH" == "x64" ]]; then
+    curl -s https://api.github.com/repos/gitleaks/gitleaks/releases/latest | grep browser_download_url | cut -d '"' -f 4 | grep 'darwin_x64' | wget -i -
+    tar xf gitleaks_*_darwin_x64.tar.gz
+else
+    echo -e "${RED}Unsupported OS and architecture combination.${NC}"
     exit 1
 fi
 
-# Download and extract gitleaks
-curl -sSL "$RELEASE_URL" -o gitleaks.tar.gz
-tar -xf gitleaks.tar.gz
 chmod +x gitleaks
 
-# Copy gitleaks to /usr/local/bin/
-# sudo cp gitleaks /usr/local/bin
+# Move gitleaks to /usr/local/bin/ to ensure it's in the PATH
+sudo mv gitleaks /usr/local/bin/
 
 echo -e "${GREEN}Gitleaks installed.${NC}"
 
@@ -80,15 +73,20 @@ echo -e "${GREEN}Gitleaks installed.${NC}"
 echo -e "${GREEN}Creating .gitleaks.toml file...${NC}"
 create_gitleaks_config
 
-# Remove temporary files
-rm gitleaks.tar.gz gitleaks
+# Clean up
+rm gitleaks_*.tar.gz gitleaks
 git restore README.md
 
 GITLEAKS_VERSION=$(gitleaks version)
-echo -e "Gitleaks version: ${GREEN}${BOLD}${GITLEAKS_VERSION}!${NC}"
+if [[ $? -ne 0 ]]; then
+    echo -e "${RED}${CROSS_MARK} Failed to install gitleaks.${NC}"
+    exit 1
+else
+    echo -e "Gitleaks version: ${GREEN}${BOLD}${GITLEAKS_VERSION}!${NC}"
+fi
 
 # Define the URL of the repository where the pre-commit script is located
-REPO_URL="https://raw.githubusercontent.com/matvrus/pre-commit-auto-script/main/pre-commit.sh"
+REPO_URL="https://raw.githubusercontent.com/ruslanlap/pre-commit-auto-script/main/pre-commit.sh"
 
 # Define the path to the hooks directory in your Git repository
 HOOKS_DIR=".git/hooks"
@@ -107,11 +105,9 @@ else
     echo -e "${RED}${CROSS_MARK} An error occurred while installing the pre-commit hook script.${NC}"
 fi
 
-
-
 download_onoffscript() {
     # Download the gitleaks.sh file from the GitHub repository
-    curl -sSfL "https://raw.githubusercontent.com/matvrus/pre-commit-auto-script/main/on-off-gitleaks.sh" -o on-off-gitleaks.sh
+    curl -sSfL "https://raw.githubusercontent.com/ruslanlap/pre-commit-auto-script/main/on-off-gitleaks.sh" -o on-off-gitleaks.sh
     chmod +x on-off-gitleaks.sh
 }
 
@@ -131,3 +127,4 @@ if [[ $? -ne 0 ]]; then
 else
     echo -e "${GREEN}${CHECK_MARK} No secrets detected.${NC}"
 fi
+
