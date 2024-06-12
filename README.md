@@ -23,7 +23,7 @@ Before using this script, make sure you have the following dependencies installe
 To install the script, simply run the following command in your terminal:
 
 ```
-curl -sSfL https://raw.githubusercontent.com/ruslanlap/pre-commit-auto-script/main/install.sh| bash
+curl -sSfL https://raw.githubusercontent.com/ruslanlap/pre-commit-auto-script/main/install.sh | bash
 ```
 
 ## Enable🔔 or Disable plugin 🔕
