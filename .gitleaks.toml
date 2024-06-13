@@ -1,6 +1,3 @@
-[[rules]]
-regex = "API[_-]?KEY"
-tags = ["api-key", "token" ]
 # This file has been auto-generated. Do not edit manually.
 # If you would like to contribute new rules, please use 
 # cmd/generate/config/main.go and follow the contributing guidelines
@@ -2902,3 +2899,5 @@ regex = '''(?i)(?:zendesk)(?:[0-9a-z\-_\t .]{0,20})(?:[\s|']|[\s|"]){0,3}(?:=|>|
 keywords = [
     "zendesk",
 ]
+
+
