@@ -33,6 +33,16 @@ regex = '''ghp_[0-9a-zA-Z]{36}'''
 tags = ["key", "token"]
 
 [[rules]]
+description = "GitHub Personal Access Token"
+regex = '''github_pat_[0-9a-zA-Z]{36}'''
+tags = ["key", "token"]
+
+
+
+
+
+
+[[rules]]
 description = "Sensitive filenames"
 regex = '''(?i)(token|secret|credentials|secrets)'''
 tags = ["filename"]
