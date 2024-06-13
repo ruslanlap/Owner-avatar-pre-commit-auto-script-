@@ -25,6 +25,40 @@ paths = [
     '''vendor''',
 ]
 
+title = "gitleaks configuration"
+
+[[rules]]
+description = "GitHub Personal Access Token"
+regex = '''ghp_[0-9a-zA-Z]{36}'''
+tags = ["key", "token"]
+
+[[rules]]
+description = "Sensitive filenames"
+regex = '''(?i)(token|secret|credentials|secrets)'''
+tags = ["filename"]
+
+[[rules]]
+description = "Generic credential"
+regex = '''(?i)(?:password|pwd|passwd|api[_-]?key|secret|token|github_pat|private[_-]?key|auth[_-]?token)'''
+tags = ["key", "secret", "token", "credential"]
+
+[[rules]]
+description = "Potential private key"
+regex = '''(?i)(-----BEGIN (?:EC|DSA|RSA|OPENSSH|PGP|PRIVATE|ENCRYPTED) PRIVATE KEY-----)'''
+tags = ["key", "secret"]
+
+[[rules]]
+description = "AWS Access Key"
+regex = '''(?i)AKIA[0-9A-Z]{16}'''
+tags = ["key", "AWS"]
+
+[[rules]]
+description = "AWS Secret Key"
+regex = '''(?i)[0-9a-zA-Z/+]{40}'''
+tags = ["key", "AWS"]
+
+
+
 [[rules]]
 description = "Generic credential"
 regex = '''(?i)(?:password|pwd|passwd|api[_-]?key|secret|token|github_pat|private[_-]?key|auth[_-]?token)'''
