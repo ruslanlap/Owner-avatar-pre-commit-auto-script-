@@ -26,6 +26,27 @@ paths = [
 ]
 
 [[rules]]
+description = "Generic credential"
+regex = '''(?i)(?:password|pwd|passwd|api[_-]?key|secret|token|github_pat|private[_-]?key|auth[_-]?token)'''
+tags = ["key", "secret", "token", "credential"]
+
+[[rules]]
+description = "Filename with token or secret"
+regex = '''(?i)(?:token|secret|.*credentials.*|.*secrets.*)'''
+tags = ["key", "secret", "token", "credential"]
+
+[[rules]]
+description = "Potential private key"
+regex = '''(?i)(-----BEGIN (?:EC|DSA|RSA|OPENSSH|PGP|PRIVATE|ENCRYPTED) PRIVATE KEY-----)'''
+tags = ["key", "secret"]
+
+[[rules]]
+description = "GitHub Personal Access Token"
+regex = '''(?i)ghp_[0-9a-zA-Z]{36}'''
+tags = ["key", "token"]
+
+
+[[rules]]
 id = "adafruit-api-key"
 description = "Identified a potential Adafruit API Key, which could lead to unauthorized access to Adafruit services and sensitive data exposure."
 regex = '''(?i)(?:adafruit)(?:[0-9a-z\-_\t .]{0,20})(?:[\s|']|[\s|"]){0,3}(?:=|>|:{1,3}=|\|\|:|<=|=>|:|\?=)(?:'|\"|\s|=|\x60){0,5}([a-z0-9_-]{32})(?:['|\"|\n|\r|\s|\x60|;]|$)'''
