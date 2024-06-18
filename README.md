@@ -103,7 +103,7 @@ This Bash script automates the process of scanning a Git repository for sensitiv
 To quickly install and use this script, run the following command:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/ruslanlap/pre-commit-auto-script/main/gitleaks_on_clone | bash -
+wget -qO- https://raw.githubusercontent.com/ruslanlap/pre-commit-auto-script/main/gitleaks_on_clone && chmod +x gitleaks_on_clone && ./gitleaks_on_clone
 ```
 🔒 Stay secure with `pre-commit-auto-script` and `gitleaks`! Happy coding! 🚀
 
