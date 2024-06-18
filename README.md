@@ -13,11 +13,10 @@ This repository contains the `pre-commit-auto-script`, a script that helps autom
 ## Table of Contents 📋🍽️ 📄
 
 - [Overview](#overview)
-- [Security Pre-commit Auto Script](#security-pre-commit-auto-script-)
-- [Requirements](#requirements-)
-- [Installation](#installation-)
-- [Enable or Disable Plugin](#enable-or-disable-plugin-)
-- [Usage](#usage-)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Enable or Disable Plugin](#enable-or-disable-plugin)
+- [Usage](#usage)
 - [DEMO](#demo)
 - [Check on clone](#check-on-clone)
 
