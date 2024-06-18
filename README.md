@@ -82,11 +82,6 @@ This Bash script automates the process of scanning a Git repository for sensitiv
 
 ## How it works
 
-1. **Clone**: Copies the repository from the provided URL to a local directory (`cloned_repos`).
-2. **Scan**: Executes Gitleaks within the cloned repository to identify security vulnerabilities.
-3. **Feedback**: Displays results in real-time with status updates (success, warning, or error).
-4. **Cleanup**: Offers an option to remove temporary files post-scan for cleanliness.
-
 ## Usage
 
 1. Ensure Git and Gitleaks are installed and accessible in your environment.
@@ -109,6 +104,6 @@ To quickly install and use this script, run the following command:
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/ruslanlap/pre-commit-auto-script/main/gitleaks_on_clone | bash -
-
+```
 🔒 Stay secure with `pre-commit-auto-script` and `gitleaks`! Happy coding! 🚀
 
