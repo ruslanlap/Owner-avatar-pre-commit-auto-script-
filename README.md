@@ -23,7 +23,7 @@ This repository contains the `pre-commit-auto-script`, a script that helps autom
 
 This repository contains the `pre-commit-auto-script`, a script that helps automate the installation and configuration of `pre-commit` hooks in your Git repository. It utilizes [gitleaks](https://github.com/zricethezav/gitleaks) to enhance the security of your codebase.
 
-### Requirements 📋
+## 💾Requirements
 
 Before using this script, make sure you have the following dependencies installed:
 
