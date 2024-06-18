@@ -19,6 +19,7 @@ This repository contains the `pre-commit-auto-script`, a script that helps autom
 - [Enable or Disable Plugin](#enable-or-disable-plugin)
 - [Usage](#usage)
 - [Demo](#demo)
+- [Check on clone](#check-on-clone))
 
 
 ## Requirements 📋
@@ -63,5 +64,8 @@ Wondering how the script works? Take a look at this demo:
 ![Alt](data/Example1.png)
 
 ![Alt](data/Example2.png)
+
+
+### Check on clone
 
 🔒 Stay secure with `pre-commit-auto-script` and `gitleaks`! Happy coding! 🚀
