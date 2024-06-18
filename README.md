@@ -73,6 +73,5 @@ Wondering how the script works? Take a look at this demo:
 ### Check on clone
 
 🔒 Stay secure with `pre-commit-auto-script` and `gitleaks`! Happy coding! 🚀
-```
 
 This version should now have a correctly functioning Table of Contents link for the "Check on clone" section.
