@@ -12,7 +12,7 @@ This repository contains the `pre-commit-auto-script`, a script that helps autom
 
 ## Table of Contents 📋🍽️ 📄
 - [Overview](#overview)
-- [Installation](#installation)
+- [Installation](#installation-)
 - [Requirements](#requirements-)
 - [Enable or Disable Plugin](#enable-or-disable-plugin-)
 - [Usage](#usage-)
