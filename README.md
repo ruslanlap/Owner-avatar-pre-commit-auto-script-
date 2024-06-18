@@ -13,11 +13,11 @@ This repository contains the `pre-commit-auto-script`, a script that helps autom
 ## Table of Contents 📋🍽️ 📄
 
 - [Overview](#overview)
-- [Security Pre-commit Auto Script](#security-pre-commit-auto-script)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Enable or Disable Plugin](#enable-or-disable-plugin)
-- [Usage](#usage)
+- [Security Pre-commit Auto Script](#security-pre-commit-auto-script-)
+- [Requirements](#requirements-)
+- [Installation](#installation-)
+- [Enable or Disable Plugin](#enable-or-disable-plugin-)
+- [Usage](#usage-)
 - [DEMO](#demo)
 - [Check on clone](#check-on-clone)
 
@@ -74,4 +74,3 @@ Wondering how the script works? Take a look at this demo:
 
 🔒 Stay secure with `pre-commit-auto-script` and `gitleaks`! Happy coding! 🚀
 
-This version should now have a correctly functioning Table of Contents link for the "Check on clone" section.
