@@ -30,7 +30,7 @@ Before using this script, make sure you have the following dependencies installe
 - Git ✔️
 - Curl ✔️
 
-## Installation ⚙️
+## Installation
 
 To install the script, simply run the following command in your terminal:
 
