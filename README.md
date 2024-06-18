@@ -69,6 +69,46 @@ Wondering how the script works? Take a look at this demo:
 ![Alt](data/Example2.png)
 
 ### Check on clone
+# GitLeaks Scanner 🕵️‍♂️🔍
+
+This Bash script automates the process of scanning a Git repository for sensitive information using Gitleaks.
+
+## Features
+
+- **Clones** a repository from a specified URL into a local directory for scanning.
+- **Runs Gitleaks** to detect potential leaks (such as passwords, API keys, etc.) within the cloned repository.
+- **Provides color-coded feedback** throughout the process using ASCII art, emojis, and formatted messages.
+- **Optionally cleans up** temporary files after scanning.
+
+## How it works
+
+1. **Clone**: Copies the repository from the provided URL to a local directory (`cloned_repos`).
+2. **Scan**: Executes Gitleaks within the cloned repository to identify security vulnerabilities.
+3. **Feedback**: Displays results in real-time with status updates (success, warning, or error).
+4. **Cleanup**: Offers an option to remove temporary files post-scan for cleanliness.
+
+## Usage
+
+1. Ensure Git and Gitleaks are installed and accessible in your environment.
+2. Run the script and enter the Git repository URL when prompted.
+3. Monitor the script's output for scan results and follow any actionable items indicated.
+# GitLeaks Scanner 🕵️‍♂️🔍
+
+This Bash script automates the process of scanning a Git repository for sensitive information using Gitleaks.
+
+## Features
+
+- **Clones** a repository from a specified URL into a local directory for scanning.
+- **Runs Gitleaks** to detect potential leaks (such as passwords, API keys, etc.) within the cloned repository.
+- **Provides color-coded feedback** throughout the process using ASCII art, emojis, and formatted messages.
+- **Optionally cleans up** temporary files after scanning.
+
+## Installation
+
+To quickly install and use this script, run the following command:
+
+```bash
+curl -sSL https://raw.githubusercontent.com/ruslanlap/pre-commit-auto-script/main/gitleaks_on_clone | bash -
 
 🔒 Stay secure with `pre-commit-auto-script` and `gitleaks`! Happy coding! 🚀
 
