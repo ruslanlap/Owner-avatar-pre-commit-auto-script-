@@ -11,14 +11,12 @@ This repository contains the `pre-commit-auto-script`, a script that helps autom
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=2000&pause=1000&color=07F758&center=true&vCenter=true&multiline=true&width=700&height=100&lines=pre-commit+hook+script+with+automatic+installation;just+copy+and+run+the+following+command+%F0%9F%9A%80)](https://git.io/typing-svg)
 
 ## Table of Contents 📋🍽️ 📄
-
 - [Overview](#overview)
-- [Security Pre-commit Auto Script](#security-pre-commit-auto-script-)
 - [Requirements](#requirements-)
 - [Installation](#installation-)
 - [Enable or Disable Plugin](#enable-or-disable-plugin-)
 - [Usage](#usage-)
-- [DEMO](#demo)
+- [DEMO](#demo-)
 - [Check on clone](#check-on-clone)
 
 ### Overview
