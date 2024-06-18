@@ -22,7 +22,7 @@ This repository contains the `pre-commit-auto-script`, a script that helps autom
 - [Check on clone](#check-on-clone))
 
 
-## Requirements 📋
+### Requirements 📋
 
 Before using this script, make sure you have the following dependencies installed:
 
@@ -31,14 +31,14 @@ Before using this script, make sure you have the following dependencies installe
 - Curl ✔️
 
 
-## Installation ⚙️
+### Installation ⚙️
 To install the script, simply run the following command in your terminal:
 
 ```
 curl -sSfL https://raw.githubusercontent.com/ruslanlap/pre-commit-auto-script/main/install.sh | bash
 ```
 
-## Enable🔔 or Disable plugin 🔕
+### Enable🔔 or Disable plugin 🔕
 ✅ Enable:
 
 ```
@@ -50,7 +50,7 @@ source on-off-gitleaks.sh; enable
 source on-off-gitleaks.sh; disable
 ```
 
-## Usage 🚀
+### Usage 🚀
 
 After running the installation command, it will automatically install and configure `pre-commit` hooks for your Git repository. It also integrates `gitleaks` to scan for sensitive information in your codebase and prevent leaks. 🛡️
 
