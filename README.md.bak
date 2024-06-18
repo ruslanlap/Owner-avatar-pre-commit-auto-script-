@@ -1,9 +1,6 @@
-Here's the full corrected version of your README.md file:
-
-```markdown
 # pre-commit hook script with automatic installation of [gitleaks](https://github.com/gitleaks/gitleaks) and checks for sensitive information 🔒
 
-✨ **Security Pre-commit Auto Script** ✨
+✨ **Security Pre-commit Auto Script ✨
 
 ![GitHub](https://img.shields.io/github/license/matvrus/pre-commit-auto-script) ![GitHub last commit](https://img.shields.io/github/last-commit/matvrus/pre-commit-auto-script) ![GitHub issues](https://img.shields.io/github/issues/matvrus/pre-commit-auto-script)
 
@@ -22,38 +19,34 @@ This repository contains the `pre-commit-auto-script`, a script that helps autom
 - [Enable or Disable Plugin](#enable-or-disable-plugin)
 - [Usage](#usage)
 - [DEMO](#demo)
-- [Check on clone](#check-on-clone)
+- [Check on clone](#check-on-clone))
 
-### Overview
-
-This repository contains the `pre-commit-auto-script`, a script that helps automate the installation and configuration of `pre-commit` hooks in your Git repository. It utilizes [gitleaks](https://github.com/zricethezav/gitleaks) to enhance the security of your codebase.
 
 ### Requirements 📋
 
 Before using this script, make sure you have the following dependencies installed:
 
 - Git ✔️
+
 - Curl ✔️
 
-### Installation ⚙️
 
+### Installation ⚙️
 To install the script, simply run the following command in your terminal:
 
-```bash
+```
 curl -sSfL https://raw.githubusercontent.com/ruslanlap/pre-commit-auto-script/main/install.sh | bash
 ```
 
 ### Enable🔔 or Disable plugin 🔕
-
 ✅ Enable:
 
-```bash
+```
 source on-off-gitleaks.sh; enable
 ```
-
 ❌ Disable:
 
-```bash
+```
 source on-off-gitleaks.sh; disable
 ```
 
@@ -64,7 +57,6 @@ After running the installation command, it will automatically install and config
 You can review and customize the list of available hooks in the `.pre-commit-config.yaml` file, which will be created in the root directory of your project. For example, you can add more arguments to the `.gitleaks.toml` file.
 
 ### DEMO 🎥
-
 Wondering how the script works? Take a look at this demo:
 
 ![Alt](data/demo.gif)
@@ -73,9 +65,7 @@ Wondering how the script works? Take a look at this demo:
 
 ![Alt](data/Example2.png)
 
+
 ### Check on clone
 
 🔒 Stay secure with `pre-commit-auto-script` and `gitleaks`! Happy coding! 🚀
-```
-
-This version should now have a correctly functioning Table of Contents link for the "Check on clone" section.
