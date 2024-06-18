@@ -18,7 +18,7 @@ This repository contains the `pre-commit-auto-script`, a script that helps autom
 - [Installation](#installation)
 - [Enable or Disable Plugin](#enable-or-disable-plugin)
 - [Usage](#usage)
-- [Demo](#demo)
+- [DEMO](#demo)
 - [Check on clone](#check-on-clone))
 
 
@@ -56,7 +56,7 @@ After running the installation command, it will automatically install and config
 
 You can review and customize the list of available hooks in the `.pre-commit-config.yaml` file, which will be created in the root directory of your project. For example, you can add more arguments to the `.gitleaks.toml` file.
 
-## DEMO 🎥
+### DEMO 🎥
 Wondering how the script works? Take a look at this demo:
 
 ![Alt](data/demo.gif)
