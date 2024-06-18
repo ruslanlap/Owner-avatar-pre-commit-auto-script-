@@ -1,6 +1,3 @@
-Here's the full corrected version of your README.md file:
-
-```markdown
 # pre-commit hook script with automatic installation of [gitleaks](https://github.com/gitleaks/gitleaks) and checks for sensitive information 🔒
 
 ✨ **Security Pre-commit Auto Script** ✨
