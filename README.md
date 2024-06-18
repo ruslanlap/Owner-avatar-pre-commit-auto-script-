@@ -2,7 +2,7 @@
 
 ✨ **Security Pre-commit Auto Script** ✨
 
-![GitHub license](https://img.shields.io/github/license/ruslanlap/pre-commit-auto-script) ![GitHub last commit](https://img.shields.io/github/last-commit/ruslanlap/pre-commit-auto-script) ![GitHub issues](https://img.shields.io/github/issues/matvrus/pre-commit-auto-script)
+![GitHub license](https://img.shields.io/github/license/ruslanlap/pre-commit-auto-script/LICENSE.txt) ![GitHub last commit](https://img.shields.io/github/last-commit/ruslanlap/pre-commit-auto-script) ![GitHub issues](https://img.shields.io/github/issues/matvrus/pre-commit-auto-script)
 
 This repository contains the `pre-commit-auto-script`, a script that helps automate the installation and configuration of `pre-commit` hooks in your Git repository. It utilizes [gitleaks](https://github.com/zricethezav/gitleaks) to enhance the security of your codebase. 😊
 
