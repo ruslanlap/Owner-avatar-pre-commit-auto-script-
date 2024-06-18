@@ -12,8 +12,8 @@ This repository contains the `pre-commit-auto-script`, a script that helps autom
 
 ## Table of Contents 📋🍽️ 📄
 - [Overview](#overview)
+- [Installation](#installation)
 - [Requirements](#requirements-)
-- [Installation](#installation-)
 - [Enable or Disable Plugin](#enable-or-disable-plugin-)
 - [Usage](#usage-)
 - [DEMO](#demo-)
@@ -30,7 +30,7 @@ Before using this script, make sure you have the following dependencies installe
 - Git ✔️
 - Curl ✔️
 
-### Installation ⚙️
+## Installation⚙️
 
 To install the script, simply run the following command in your terminal:
 
