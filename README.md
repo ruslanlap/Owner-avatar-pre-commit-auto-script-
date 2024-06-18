@@ -73,13 +73,6 @@ Wondering how the script works? Take a look at this demo:
 
 This Bash script automates the process of scanning a Git repository for sensitive information using Gitleaks.
 
-## Features
-
-- **Clones** a repository from a specified URL into a local directory for scanning.
-- **Runs Gitleaks** to detect potential leaks (such as passwords, API keys, etc.) within the cloned repository.
-- **Provides color-coded feedback** throughout the process using ASCII art, emojis, and formatted messages.
-- **Optionally cleans up** temporary files after scanning.
-
 ## How it works
 
 ## Usage
@@ -87,9 +80,6 @@ This Bash script automates the process of scanning a Git repository for sensitiv
 1. Ensure Git and Gitleaks are installed and accessible in your environment.
 2. Run the script and enter the Git repository URL when prompted.
 3. Monitor the script's output for scan results and follow any actionable items indicated.
-# GitLeaks Scanner 🕵️‍♂️🔍
-
-This Bash script automates the process of scanning a Git repository for sensitive information using Gitleaks.
 
 ## Features
 
